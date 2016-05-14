@@ -17,9 +17,7 @@ public class PongController {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public String doPong() {
-
         return "pong";
-
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
