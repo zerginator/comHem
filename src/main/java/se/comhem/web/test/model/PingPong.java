@@ -8,9 +8,9 @@ public class PingPong implements Serializable {
 	private String message;
     private String input;
 
-    public PingPong(String name, String surname) {
-        this.message = name;
-        this.input = surname;
+    public PingPong(String message, String input) {
+        this.message = message;
+        this.input = input;
     }
 
     public String getMessage() {

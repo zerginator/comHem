@@ -2,15 +2,18 @@ package se.comhem.web.test.model;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotBlank;
 
 public class MarvelHero implements Hero, Serializable {
 
 	private static final long serialVersionUID = 1L;
-	@NotBlank(message = "name must not be blank!")
+	@NotNull(message = "name must not be blank!")
 	private String name;
-	@NotBlank(message = "weakness must not be blank!")
+	@NotNull(message = "weakness must not be blank!")
     private String weakness;
+	@NotNull(message = "gender must not be blank!")
     private Gender gender;
 
     public MarvelHero() { }

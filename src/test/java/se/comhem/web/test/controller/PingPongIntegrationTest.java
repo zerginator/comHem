@@ -1,4 +1,4 @@
-package se.comhem.web.test;
+package se.comhem.web.test.controller;
 
 import org.junit.Before;
 import org.junit.Test;

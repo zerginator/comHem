@@ -32,13 +32,13 @@ public class HeroController {
 
     @RequestMapping(method = RequestMethod.GET , produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<Integer,Hero>> listHeroes() {
-        return new ResponseEntity<Map<Integer,Hero>>(heroService.list(), HttpStatus.OK);
+        return new ResponseEntity<Map<Integer,Hero>>(heroService.getList(), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getHero(@PathVariable String id) {
         try {
-            return new ResponseEntity<Hero>(heroService.get(Integer.parseInt(id)), HttpStatus.OK);
+            return new ResponseEntity<Hero>(heroService.getHero(Integer.parseInt(id)), HttpStatus.OK);
         } catch (NumberFormatException nfe) {
             return ResponseEntity.badRequest().body("Please insert a number for a hero , for example YOURDOMAIN/heroes/1");
         }

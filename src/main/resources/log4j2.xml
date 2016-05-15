@@ -6,29 +6,10 @@
     </Console>
   </Appenders>
   <Loggers>
-    <Logger name="org.apache.log4j.xml" level="info"/>
+    <Logger name="se.comhem.web.test" level="info"/>
+    <Logger name="org.springframework" level="info"/>
     <Root level="info">
       <AppenderRef ref="STDOUT"/>
     </Root>
   </Loggers>
 </Configuration>
-<!-- <Configuration status="warn" monitorInterval="30">
-    <Appenders>
-        <RollingRandomAccessFile name="RollingRandomAccessFile" fileName="/var/log/trax/api.log"
-                                 filePattern="/var/log/trax/$${date:yyyy-MM}/api-%d{MM-dd-yyyy}-%i.log.gz">
-            <PatternLayout>
-                <Pattern>%d [%t] %c{2} %-5level - %m%n</Pattern>
-            </PatternLayout>
-            <Policies>
-                <TimeBasedTriggeringPolicy />
-                <SizeBasedTriggeringPolicy size="500 MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="20"/>
-        </RollingRandomAccessFile>
-    </Appenders>
-    <Loggers>
-        <Root level="DEBUG">
-            <AppenderRef ref="RollingRandomAccessFile"/>
-        </Root>
-    </Loggers>
-</Configuration> -->
